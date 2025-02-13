@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Amor</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(120deg, #ff758c, #ff7eb3);
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            text-align: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 90%;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #ff4081;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        p {
+            font-size: 1.3em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        button {
+            font-size: 1.3em;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 140px;
+            font-weight: bold;
+        }
+        .yes {
+            background-color: #ff4081;
+            color: white;
+            box-shadow: 0 4px 10px rgba(255, 64, 129, 0.3);
+        }
+        .no {
+            background-color: white;
+            color: #ff4081;
+            border: 2px solid #ff4081;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        #mensaje {
+            font-size: 2em;
+            margin-top: 20px;
+            color: #ff4081;
+            font-weight: bold;
+        }
+        .heart {
+            width: 100px;
+            height: 100px;
+            background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center center/cover;
+            margin-top: 20px;
+            display: none;
+            animation: pulse 1.5s infinite;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Eres Mí Efecto Mariposa 💖</h1>
+        <div class="image-container">
+            <img src="amorcito.jpg" alt="Imagen romántica">
+        </div>
+        <p>Desde que llegaste a mi vida, todo cambió para mejor. Eres la razón por la que sonrío cada día, y no puedo evitar pensar que el mejor capítulo de mi historia comenzó cuando nuestras vidas se cruzaron. Gracias por existir y permitirme ser tu novio. </p>
+        <p>¿Te gustaría ser mi San Valentín? 💕</p>
+        <div class="buttons">
+            <button class="yes" onclick="respuesta('si')">¡Sí! 💘</button>
+            <button class="no" onclick="respuesta('no')">¡No! 😢</button>
+        </div>
+        <h2 id="mensaje"></h2>
+        <div class="heart" id="heart"></div>
+    </div>
+    <script>
+        function respuesta(opcion) {
+            let mensaje = document.getElementById("mensaje");
+            let heart = document.getElementById("heart");
+            if (opcion === 'si') {
+                mensaje.innerHTML = "¡Me haces muy feliz mi nena guapota, te amo con el alma! 💖";
+                heart.style.display = "block";
+            } else {
+                mensaje.innerHTML = "¡Chuuuu cómo que no! 😔";
+                heart.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
